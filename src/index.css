@@ -586,8 +586,9 @@ RESPONSIVENESS
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 656px) {
   .search__bar--container {
+    padding-top: 48px;
     display: flex;
     flex-direction: column;
   }
@@ -641,4 +642,14 @@ RESPONSIVENESS
     .search__bar {
       width: 300px;
     }
+}
+
+@media (max-width:380px) {
+  #featured {
+    height: 350vh;
+  }
+
+  .search__results--container {
+    height: 320vh;
+  }
 }
