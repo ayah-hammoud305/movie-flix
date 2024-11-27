@@ -500,22 +500,6 @@ RESPONSIVENESS
 }
 
 @media (max-width: 960px) {
-  .nav__link {
-    visibility: hidden;
-  }
-
-  .nav__bars--icon {
-    visibility: visible;
-    
-  }
-
-  .nav__links {
-    position: absolute;
-    width: 70%;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-  }
 
   .select__type {
     width: 250px;
@@ -528,6 +512,16 @@ RESPONSIVENESS
 
   .movie__row {
     padding-left: 12px;
+  }
+
+  .movie__selected {
+    display: flex;
+    align-items: center;
+  }
+
+  .movie__selected--desc {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -587,6 +581,20 @@ RESPONSIVENESS
 }
 
 @media (max-width: 656px) {
+
+  .contact {
+    display: none;
+  }
+
+  .nav__container {
+    display: flex;
+    
+  }
+
+  .nav__links {
+    display: flex;
+    justify-content: end;
+  }
   .search__bar--container {
     padding-top: 48px;
     display: flex;
@@ -625,12 +633,7 @@ RESPONSIVENESS
 }
 
 @media (max-width: 450px) {
-    .nav__links {
-      width: 50%;
-      display: flex;
-      justify-content: center;
-    }
-
+   
     .landing__title {
       font-size: 24px;
     }

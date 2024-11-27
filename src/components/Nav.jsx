@@ -14,14 +14,11 @@ const Nav = () => {
             <h1 className='nav__logo--text'>Movie<span className='red'>Flix</span></h1>
             </div>
             <ul className='nav__links'>
-                <li className='nav__link'>
+                <li className='nav__link home'>
                     <a className='nav__link' href='/' >Home</a>
                 </li>
-                <li className='nav__link'>
+                <li className='nav__link contact'>
                     <button className='nav__btn'>Contact Us</button>
-                </li>
-                <li className="nav__bars">
-                <FontAwesomeIcon className='nav__bars--icon' icon={faBars} />
                 </li>
             </ul>
         </div>
