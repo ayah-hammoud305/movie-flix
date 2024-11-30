@@ -2,17 +2,24 @@ import React, { useEffect, useState } from 'react'
 import Spinner from '../components/ui/Spinner';
 import { useParams } from 'react-router-dom';
 
-const Movie = (props) => {
+const Movie = () => {
     
+    // useParams() function for accessing dynamic parameters in URLs
     const { id } = useParams();
     const [movie, setMovie] = useState(null);
+    // set movies to null
     const [isLoading, setIsLoading] = useState(true);
+    // set loading to true so it shows up in refresh
 
   useEffect(() => {
+    // useEffect preforms when the page renders
     const fetchMovie = async () => {
+        // fetch data from api using OMDB ID
       try {
         const response = await fetch(`https://www.omdbapi.com/?i=${id}&apikey=ed88fe15`);
+        // "?i=${id}"" is the query parameter
         const data = await response.json();
+        // convert to json
         setMovie(data);
       } catch (error) {
         console.error("Error fetching movie:", error);
@@ -20,12 +27,15 @@ const Movie = (props) => {
     };
 
     fetchMovie();
+    // call the function
   }, [id]);
+
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 1000); 
+    // set the loader to false once the page renders after 1 second
 
     return () => clearTimeout(timer); 
   }, []);
@@ -75,4 +85,4 @@ const Movie = (props) => {
   )
 }
 
-export default Movie
+export default Movie;
